@@ -7,11 +7,11 @@ export interface LogoProps {
   className?: string;
 }
 
-export default function Logo({ onlyIcon, className }: LogoProps) {
+export default function Logo({ onlyIcon = false, className }: LogoProps) {
   return (
     <div className={cn("flex items-center gap-x-2", className)}>
       <Image width={40} height={40} src="/penguin.svg" alt="logo" priority />
-      <p className="text-primary text-xl font-bold">Penguage</p>
+      {!onlyIcon && <p className="text-primary text-xl font-bold">Penguage</p>}
     </div>
   );
 }
