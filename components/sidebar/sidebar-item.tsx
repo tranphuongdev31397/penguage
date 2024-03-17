@@ -1,10 +1,10 @@
 "use client";
-import { SidebarItem } from "./data";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SidebarItem } from "@/configs/menus";
 
 export interface SidebarItemProps extends SidebarItem {
   onlyIcon?: boolean;
@@ -19,7 +19,7 @@ export default function SidebarItem({
   const pathname = usePathname();
   const active = useMemo(() => {
     return pathname === path;
-  }, [pathname]);
+  }, [pathname, path]);
   return (
     <Button
       className="flex px-2 py-1 gap-x-2 justify-center  lg:justify-start"
