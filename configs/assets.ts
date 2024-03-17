@@ -3,4 +3,5 @@ export const ICONS = {
   LEADERBOARD: "/leaderboard.svg",
   SHOP: "/shop.svg",
   QUEST: "/quest.svg",
+  ACCOUNT: "/account.svg",
 };

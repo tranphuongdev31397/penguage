@@ -15,7 +15,7 @@ export const SIDEBAR_MENU: SidebarItem[] = [
   },
   {
     path: ROUTES.LEADERBOARD,
-    label: "Leaderboard",
+    label: "Leader board",
     srcIcon: ICONS.LEADERBOARD,
   },
   {
@@ -27,5 +27,35 @@ export const SIDEBAR_MENU: SidebarItem[] = [
     path: ROUTES.SHOP,
     label: "Shop",
     srcIcon: ICONS.SHOP,
+  },
+];
+
+export const BOTTOM_BAR: SidebarItem[] = [
+  {
+    path: ROUTES.LEADERBOARD,
+    label: "Leader board",
+    srcIcon: ICONS.LEADERBOARD,
+  },
+  {
+    path: ROUTES.QUEST,
+    label: "Quest",
+    srcIcon: ICONS.QUEST,
+  },
+  {
+    path: ROUTES.LEARN,
+    label: "Learn",
+    srcIcon: ICONS.LEARN,
+  },
+
+  {
+    path: ROUTES.SHOP,
+    label: "Shop",
+    srcIcon: ICONS.SHOP,
+  },
+
+  {
+    path: ROUTES.ACCOUNT,
+    label: "Account",
+    srcIcon: ICONS.ACCOUNT,
   },
 ];

@@ -4,11 +4,13 @@ import SidebarItem from "./sidebar-item";
 import { cn } from "@/lib/utils";
 import * as React from "react";
 import { useIsClient, useMediaQuery } from "usehooks-ts";
-import { SIDEBAR_MENU } from "./data";
+import { SIDEBAR_MENU } from "@/configs/menus";
 
-export interface SidebarProps {}
+export interface SidebarProps {
+  className?: string;
+}
 
-export default function Sidebar(props: SidebarProps) {
+export default function Sidebar({ className }: SidebarProps) {
   const isLg = useMediaQuery("(min-width: 1024px)");
 
   const isClient = useIsClient();
@@ -16,7 +18,8 @@ export default function Sidebar(props: SidebarProps) {
   return (
     <aside
       className={cn(
-        "px-4 w-sidebar-table lg:w-sidebar-desktop fixed left-0 border-r-2 border-muted top-0 min-h-screen h-full"
+        "px-4 w-sidebar-table lg:w-sidebar-desktop fixed left-0 border-r-2 border-muted top-0 min-h-screen h-full",
+        className
       )}
     >
       <div className="py-8  lg:pl-3.5">
