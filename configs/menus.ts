@@ -52,10 +52,4 @@ export const BOTTOM_BAR: SidebarItem[] = [
     label: "Shop",
     srcIcon: ICONS.SHOP,
   },
-
-  {
-    path: ROUTES.ACCOUNT,
-    label: "Account",
-    srcIcon: ICONS.ACCOUNT,
-  },
 ];
