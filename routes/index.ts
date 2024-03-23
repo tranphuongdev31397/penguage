@@ -5,6 +5,7 @@ const ROUTES = {
   SHOP: "/shop",
   QUEST: "/quest",
   ACCOUNT: "/account",
+  COURSES: "/courses",
 };
 
 export default ROUTES;

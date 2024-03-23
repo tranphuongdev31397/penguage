@@ -1,13 +1,17 @@
 import { FeedWrapper } from "@/components/wrapper";
 import { StickyWrapper } from "@/components/wrapper/sticky-wrapper";
 import * as React from "react";
+import { Header } from "./_components/header";
+import { UserProgress } from "@/components/user-progess";
+import { FLAGS } from "@/configs/assets";
 
 export interface LearnPageProps {}
 
 export default function LearnPage(props: LearnPageProps) {
   return (
-    <div className="flex px-6 flex-row gap-12">
+    <div className="flex px-6 w-full flex-row gap-12">
       <FeedWrapper>
+        <Header title="Spainish" />
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi amet quia
         repellendus molestias accusantium porro quos excepturi, recusandae
         voluptatem quam blanditiis rerum quo architecto eos, earum similique
@@ -117,7 +121,18 @@ export default function LearnPage(props: LearnPageProps) {
         consequuntur fugit, quisquam laborum sed impedit! Incidunt, tenetur
         molestiae.
       </FeedWrapper>
-      <StickyWrapper>Hello from sticky</StickyWrapper>
+      <StickyWrapper>
+        <UserProgress
+          activeCourse={{
+            id: 1,
+            title: "Spainish",
+            imageSrc: FLAGS.SPAIN,
+          }}
+          hasActiveSubscription={false}
+          hearts={5}
+          points={100}
+        />
+      </StickyWrapper>
     </div>
   );
 }

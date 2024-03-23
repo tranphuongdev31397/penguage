@@ -13,10 +13,11 @@ export interface SidebarProps {
 }
 
 export default function Sidebar({ className }: SidebarProps) {
-  const isLg = useMediaQuery("(min-width: 1024px)");
+  const isLg = useMediaQuery("(min-width: 1024px)", {
+    defaultValue: false,
+    initializeWithValue: false,
+  });
 
-  const isClient = useIsClient();
-  if (!isClient) return null;
   return (
     <aside
       className={cn(

@@ -1,7 +1,15 @@
 export const ICONS = {
-  LEARN: "/learn.svg",
-  LEADERBOARD: "/leaderboard.svg",
-  SHOP: "/shop.svg",
-  QUEST: "/quest.svg",
-  ACCOUNT: "/account.svg",
+  LEARN: "/images/learn.svg",
+  LEADERBOARD: "/images/leaderboard.svg",
+  SHOP: "/images/shop.svg",
+  QUEST: "/images/quest.svg",
+  ACCOUNT: "/images/account.svg",
+  HEART: "/images/heart.svg",
+  THUNDER: "/images/thunder.svg",
+  DIAMOND: "/images/diamond.svg",
+  FIRE: "/images/fire.svg",
+};
+
+export const FLAGS = {
+  SPAIN: "/images/flags/es.svg",
 };
