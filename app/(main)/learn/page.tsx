@@ -26,7 +26,7 @@ export default async function LearnPage(props: LearnPageProps) {
       <StickyWrapper>
         <UserProgress
           activeCourse={userProgressData.activeCourse}
-          hasActiveSubscription={!!userProgressData.hasActiveSubscription}
+          hasActiveSubscription={false} // TODO: change it once subscription table db is added for purchase feature
           hearts={userProgressData.hearts}
           points={userProgressData.points}
         />

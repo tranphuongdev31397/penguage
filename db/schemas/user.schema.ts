@@ -12,7 +12,6 @@ export const userProgress = pgTable("user_progress", {
   }),
   hearts: integer("hearts").notNull().default(5),
   points: integer("points").notNull().default(0),
-  hasActiveSubscription: boolean("has_active_subscription").default(false),
 });
 
 export const userProgressRelations = relations(userProgress, ({ one }) => ({
