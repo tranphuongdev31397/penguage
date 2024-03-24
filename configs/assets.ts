@@ -8,6 +8,10 @@ export const ICONS = {
   THUNDER: "/images/thunder.svg",
   DIAMOND: "/images/diamond.svg",
   FIRE: "/images/fire.svg",
+
+  //LOGO
+  PENGUIN: "/images/penguin.svg",
+  DEFAULT_IMAGE: "/images/penguin.svg",
 };
 
 export const FLAGS = {

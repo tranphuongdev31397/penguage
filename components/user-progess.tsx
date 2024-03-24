@@ -36,7 +36,7 @@ export function UserProgress({
       <Link href={ROUTES.SHOP}>
         <Button variant={"ghost"}>
           <Image width={28} height={28} src={ICONS.HEART} alt={"diamond"} />
-          {true ? (
+          {hasActiveSubscription ? (
             <InfinityIcon className="ml-2 text-rose-500" />
           ) : (
             <span className="ml-2 text-rose-500">{hearts}</span>

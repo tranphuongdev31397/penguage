@@ -4,10 +4,19 @@ import * as React from "react";
 import { Header } from "./_components/header";
 import { UserProgress } from "@/components/user-progess";
 import { FLAGS } from "@/configs/assets";
+import { getUserProgress } from "@/db/queries";
+import { RedirectType, redirect } from "next/navigation";
+import ROUTES from "@/routes";
 
 export interface LearnPageProps {}
 
-export default function LearnPage(props: LearnPageProps) {
+export default async function LearnPage(props: LearnPageProps) {
+  const userProgressData = await getUserProgress();
+
+  if (!userProgressData) {
+    redirect(ROUTES.COURSES);
+  }
+
   return (
     <div className="flex px-6 w-full flex-row gap-12">
       <FeedWrapper>

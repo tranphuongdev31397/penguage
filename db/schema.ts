@@ -1,7 +1,3 @@
-import { serial, text, pgTable } from "drizzle-orm/pg-core";
+export * from "@/db/schemas/user.schema";
 
-export const courses = pgTable("courses", {
-  id: serial("id").primaryKey(),
-  title: text("title").notNull(),
-  imageSrc: text("image_src").notNull(),
-});
+export * from "@/db/schemas/courses.schema";
