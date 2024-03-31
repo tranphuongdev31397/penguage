@@ -28,7 +28,7 @@ export const challengesRelations = relations(challenges, ({ one, many }) => ({
     fields: [challenges.lessonId],
     references: [lessons.id],
   }),
-  challengesOptions: many(challengeOptions),
+  challengeOptions: many(challengeOptions),
   challengeProgress: many(challengeProgress),
 }));
 
@@ -40,7 +40,7 @@ export const challengeOptions = pgTable("challenge_options", {
     })
     .notNull(),
   text: text("text").notNull(),
-  correct: text("correct").notNull(),
+  correct: boolean("correct").notNull(),
   imageSrc: text("image_src"),
   audioSrc: text("audio_src"),
 });

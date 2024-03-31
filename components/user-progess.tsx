@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import { ICONS } from "@/configs/assets";
 import { InfinityIcon } from "lucide-react";
+import FlagCountry from "./flag-country";
 
 export interface UserProgressProps {
   activeCourse: Course;
@@ -24,11 +25,9 @@ export function UserProgress({
     <div className="flex justify-between gap-x-2 w-full items-center">
       <Link href={ROUTES.COURSES}>
         <Button variant={"ghost"}>
-          <Image
-            width={28}
-            height={28}
-            src={activeCourse.imageSrc}
-            alt={activeCourse.title}
+          <FlagCountry
+            countryCode={activeCourse.countryCode}
+            className="!w-7 !h-auto"
           />
         </Button>
       </Link>

@@ -1,9 +1,10 @@
+import FlagCountry from "@/components/flag-country";
 import { Button } from "@/components/ui/button";
 import { Course } from "@/db/types/courses";
 import { CheckIcon } from "lucide-react";
 import Image from "next/image";
 import * as React from "react";
-
+import ReactCountryFlag from "react-country-flag";
 export interface CardCourseProps {
   active: boolean;
   course: Course;
@@ -31,12 +32,10 @@ export function CardCourse({
             </div>
           )}
         </div>
-        <Image
-          width={70}
-          height={200}
-          src={course.imageSrc}
-          alt={course.title}
-        />
+
+        <div className="h-[70px]">
+          <FlagCountry countryCode={course.countryCode} />
+        </div>
 
         <h1 className="text-neutral-700 mb-3 font-bold">{course.title}</h1>
       </div>
